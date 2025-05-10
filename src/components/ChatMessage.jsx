@@ -1,18 +1,15 @@
 function ChatMessage({ sender, text }) {
   const isUser = sender === 'user';
+
   return (
-    <div
-      style={{
-        textAlign: isUser ? 'right' : 'left',
-        margin: '0.5rem 0',
-        background: isUser ? '#d1e7dd' : '#f8d7da',
-        padding: '0.5rem 1rem',
-        borderRadius: '10px',
-        display: 'inline-block',
-        maxWidth: '80%'
-      }}
-    >
-      <strong>{isUser ? 'You' : 'Bot'}:</strong> {text}
+    <div style={{
+      backgroundColor: isUser ? '#444654' : '#343541',
+      padding: '1rem',
+      margin: '0.25rem 0',
+      borderRadius: '8px',
+      whiteSpace: 'pre-wrap'
+    }}>
+      <strong>{isUser ? 'You' : 'GPT'}:</strong> {text}
     </div>
   );
 }
